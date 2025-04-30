@@ -3,6 +3,8 @@
 The official repository for "Asynchronous Multi-Object Tracking with an Event Camera". More to come soon.
 
 <!-- <video src="./supplementary/AEMOT_supplementary_video_2025.mp4" controls="controls" style="MAX;"></> -->
+![alt text](./supplementary/thumbnail.jpg)
+
 
 [Watch the supplementary video](./supplementary/AEMOT_supplementary_video_2025.mp4)
 
