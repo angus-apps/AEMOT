@@ -3,7 +3,10 @@
 The official repository for "Asynchronous Multi-Object Tracking with an Event Camera". More to come soon.
 
 
-<video src="./supplementary/AEMOT_supplementary_video_2025.mp4" controls></>
+<!-- <video src="./supplementary/AEMOT_supplementary_video_2025.mp4" controls></> -->
+
+[![Watch the video](https://github.com/angus-apps/AEMOT/blob/main/supplementary/thumbnail.jpg)](https://github.com/angus-apps/AEMOT/blob/main/supplementary/AEMOT_supplementary_video_2025.mp4)
+
 
 ## For academic use only
 Events cameras are ideal sensors for enabling robots to detect and track objects in highly dynamic environments due to their low latency output, high temporal resolution, and high dynamic range.
@@ -17,3 +20,4 @@ We evaluate AEMOT on a new Bee Swarm Dataset, where it tracks dozens of small be
 This paper was accepted by the 2025 IEEE International Conference on Robotics and Automation (ICRA).
 
 Angus Apps, Ziwei Wang, Vladimir Perejogin, Timothy L. Molloy, and Robert Mahony
+
