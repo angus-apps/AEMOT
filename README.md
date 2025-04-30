@@ -5,7 +5,8 @@ The official repository for "Asynchronous Multi-Object Tracking with an Event Ca
 
 <!-- <video src="./supplementary/AEMOT_supplementary_video_2025.mp4" controls></> -->
 
-[![Watch the video](https://github.com/angus-apps/AEMOT/blob/main/supplementary/thumbnail.jpg)](https://github.com/angus-apps/AEMOT/blob/main/supplementary/AEMOT_supplementary_video_2025.mp4)
+<video src="./supplementary/AEMOT_supplementary_video_2025.mp4" controls="controls" style="max-width: 730px;">
+</video>
 
 
 ## For academic use only
