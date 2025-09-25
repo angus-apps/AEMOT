@@ -1,0 +1,170 @@
+#---------------------------------------------#
+#------            Input Data            -----#
+#---------------------------------------------#
+
+f_use_classifier    : 1
+classifer_directory : "../torch_models/"
+classifier_model    : "bee_classifier.pt"
+
+#---- Input File ----#
+input_folder_path   : "../data/"
+input_data_name     : "bees"
+ref_image_ts_path   : ""
+
+f_load_all_events       : 0 # if set, load all events at the start then read from vector, otherwise load each event as we go 
+
+f_process_start_time    : 1
+process_ts_start        : 0
+process_ts_end          : 5
+
+f_process_start_events  : 0
+event_num_start         : -1
+event_num_end           : -1
+
+#---- Camera Parameters ----#
+width     : 1281
+height    : 721
+
+#---------------------------------------------#q
+#------           Output Flags           -----#
+#---------------------------------------------#
+publish_framerate: 40   # 40 is normal speed, higher = slower.
+
+#----- Verbose Flags -----#
+f_verbose_eventloader     : 0
+f_verbose_visualiser      : 0
+f_verbose_hpf             : 0
+f_verbose_detector        : 0
+f_verbose_SAE             : 0
+f_verbose_kf              : 0
+f_verbose_classifier      : 0
+
+#---- Display Flags ----#
+# Flags to show videosq
+f_show_blob_tracks        : 1
+f_show_candidate_tracks   : 0
+f_show_all_events         : 0
+f_show_track_events       : 0
+f_show_residual_events    : 0
+f_show_intensity_patch    : 0
+
+f_visualiser_show_delta   : 0
+
+#---- Save Flags ----#
+# Flags to save videos
+f_save_event_csv          : 0
+f_save_blob_tracks        : 1
+f_save_candidate_tracks   : 0
+f_save_all_events         : 0
+f_save_track_events       : 0
+f_save_residual_events    : 0
+
+f_save_image              : 0 
+f_save_track              : 0 
+
+f_log_data                : 0
+
+
+#---- Tracker Setup Flags ----#
+f_select_target           : 2  # 0: read from config,    1: manual select,    2: detector
+f_event_format            : 1  # 0: ts,x,y,p   1: x,y,p,ts
+
+ring_buffer_len           : 20
+contrast_threshold        : 0.25
+alpha                     : 50
+
+
+#---------------------------------------------#
+#------          Track Detector          -----#
+#---------------------------------------------#
+# SAE Parameters
+SAE_method                    : "all"
+SAE_ksize                     : 11
+SAE_alpha                     : 5
+
+SAE_operation_rate            : 10 # how many events between each operation
+
+SAE_detection_threshold       : 0.97 # val = cos(theta)
+SAE_min_active_pixels         : 3
+SAE_min_contributions         : 3
+SAE_min_detections_in_patch   : 3
+
+# Candidate thresholds
+MAX_NUMBER_OF_TRACKS          : 1000
+
+candidate_pos_cov_threshold   : 15
+candidate_vel_cov_threshold   : 300000
+candidate_lamb_cov_threshold  : 1.5
+candidate_theta_cov_threshold : 0.05
+candidate_q_cov_threshold     : 2
+
+candidate_lamb_size_threshold : 3
+candidate_vel_threshold       : 500
+
+
+candidate_dt_termination      : 0.01
+candidate_age_termination     : 0.05
+candidate_evol_age            : 0.05
+
+
+#---------------------------------------------#
+#------         Track Classifier         -----#
+#---------------------------------------------#
+events_between_classification         : 50
+classifier_evaluation_buffer_size     : 15
+classifier_threshold                  : 0.9
+
+#---------------------------------------------#
+#------         Data Association         -----#
+#---------------------------------------------#
+# Mahalanobis distance
+f_mahal_distance               : 1
+mahal_distance_threshold       : 13.82
+
+# Euclidean distance
+f_euc_distance                 : 0
+alpha_dist                     : 1.4
+dist_threshold                 : 10
+
+#---------------------------------------------#
+#------          Track Manager           -----#
+#---------------------------------------------#
+f_evaluate_tracks              : 1
+TM_evaluation_event_rate       : 1 # how many events between track evaluation 
+
+#---------------------------------------------#
+#------        Filter Parameters         -----#
+#---------------------------------------------#
+
+# Initial covariance values 
+var_x: 50
+var_y: 50   
+var_vx: 100000
+var_vy: 100000 
+var_lambda_1: 5
+var_lambda_2: 5
+var_theta: 0.5
+var_q: 2
+var_delta: 50
+
+# Process values
+q_x: 50
+q_y: 50  
+q_vx: 2000
+q_vy: 2000
+q_lambda_1: 0.1
+q_lambda_2: 0.1
+q_theta: 0.01
+q_q: 0.1
+q_delta: 5
+
+q_vx_init  : 200000
+q_vy_init  : 200000
+
+position_x_init: [501] #, 579]
+position_y_init: [250] #, 245]
+lambda_init: 10 #30
+
+# Update velocity process noise (Q_v)
+q_v_update_event_count   : 1000 # Number of events before we start updating q_v
+q_v_update_ratio         : 0.70  # Ratio of q in direction and perpendicular to velocity
