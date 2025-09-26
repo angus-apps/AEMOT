@@ -37,9 +37,6 @@ If you use or discuss our method, please cite our paper as follows:
 
 
 
-
-
-
 ## Code and Data
 
 ### Installation
@@ -64,11 +61,6 @@ AEMOT is designed to be built as a cmake project. Assuming all prerequisites are
     cmake --build . -j8
 ```
 
-<!-- ### Data
-[Click here to download the labelled dataset.]()
-
-The `Bee Swarm Dataset` is located `data/`, and is ready to use with the `bees.yaml` configuration file. -->
-
 ### Run  
 
 ```
@@ -76,3 +68,9 @@ The `Bee Swarm Dataset` is located `data/`, and is ready to use with the `bees.y
     ./aeb_tracker -i {config_file_name}
 ```
 Choose the {config_file_name} from `config/` directory. E.g., `./aeb-tracker -i bees`
+
+
+### Data
+[Click here to download the labelled dataset and training data.](https://anu365-my.sharepoint.com/:f:/g/personal/u6944654_anu_edu_au/Erzzll4KGE5Fi4w0lJiFM9oBrq9_1N_hw_Dlx2WW-U1Spg?e=ZfDzbh)
+
+The `Bee Swarm Dataset` is located `data/`, and is ready to use with the `bees.yaml` configuration file.
