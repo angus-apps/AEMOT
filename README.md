@@ -71,6 +71,6 @@ Choose the {config_file_name} from `config/` directory. E.g., `./aeb-tracker -i 
 
 
 ### Data
-[Click here to download the labelled dataset and training data.](https://anu365-my.sharepoint.com/:f:/g/personal/u6944654_anu_edu_au/IgC885ZeChhORYuMNJSYhTPaAY1Fcrrjyy5Dw3X-tDgBExM?e=ccaZT0)
+[Click here to download the labelled dataset and training data.](https://drive.google.com/drive/folders/1CRDTIYgB75JpNhAFJQb264ixc8ok_204?usp=sharing)
 
 The `Bee Swarm Dataset` is located `data/`, and is ready to use with the `bees.yaml` configuration file.
